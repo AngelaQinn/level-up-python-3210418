@@ -1,8 +1,6 @@
-def is_palindrome(txt):
-  revtext = ''
-  for i in txt:
-    revtext = i+revtext
-    if txt == revtext:
-      print('yes')
-    else:
-      print('no')
+import re
+
+def is_palindrome(phrase):
+    forwards = ''.join(re.findall(r'[a-z]+', phrase.lower()))
+    backwards = forwards[::-1]
+    return forwards == backwards
