@@ -1,6 +1,8 @@
-def is_palindrome(text):
-  for i in range(0, int(len(text)/2)):
-    if text[i] != text[len(text)-i-1]:
+def is_palindrome(txt):
+  revtext = ''
+  for i in txt:
+    revtext = i+revtext
+    if txt == revtext:
       print('yes')
     else:
       print('no')
